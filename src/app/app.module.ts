@@ -27,6 +27,12 @@ import { PagesComponent } from './pages/pages.component';
 import { HakuComponent } from './haku/haku.component';
 import { AlavalikkoComponent } from './alavalikko/alavalikko.component';
 import {alavalikko2 } from './alavalikko/alavalikko.component';
+import {HttpModule} from '@angular/http';
+import { RavintolatService } from './ravintolat.service';
+import { KayttajatService } from './kayttajat.service';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 
 
@@ -45,7 +51,7 @@ import {alavalikko2 } from './alavalikko/alavalikko.component';
     
   ],
   imports: [
-    BrowserModule, FormsModule, MatInputModule, RouterModule.forRoot([
+    BrowserModule, HttpModule, FormsModule, HttpClientModule, MatInputModule, RouterModule.forRoot([
       {
         path:'',
         redirectTo:'/junk-food',
@@ -62,7 +68,7 @@ import {alavalikko2 } from './alavalikko/alavalikko.component';
     ReactiveFormsModule, MatBottomSheetModule, MatListModule
   ],
   entryComponents: [alavalikko2],
-  providers: [],
+  providers: [RavintolatService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

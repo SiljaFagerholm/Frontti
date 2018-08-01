@@ -1,5 +1,35 @@
+
+
+
 <mat-grid-list cols="1" rowHeight="2:1">
-    <mat-grid-tile>Ravintola</mat-grid-tile>
+    <mat-grid-tile>
+      <div>
+      <a href="#" id="new-button">New</a>
+<table>
+<thead>
+    <tr>
+        <th>Ravintola nimi</th>
+        <th>DarraRating</th>
+      
+    </tr>
+</thead>
+<tbody>
+  
+  <tr *ngFor="let kayttajat of result"> 
+    <td>{{ kayttajat.ravintolanNimi }}</td>
+    <td>{{ kayttajat.ratingDarra }}</td>
+   
+ 
+</tbody>
+</table>
+
+</div>
+<div>
+  <button (click)="Hae()">Calculate</button><br/>
+ 
+
+</div>
+    </mat-grid-tile>
     <mat-grid-tile>2</mat-grid-tile>
     <mat-grid-tile>3</mat-grid-tile>
     <mat-grid-tile>4</mat-grid-tile>

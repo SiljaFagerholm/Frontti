@@ -7,8 +7,28 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  
+
+
+
+
 </head>
 <body>
-  <app-root></app-root>
+ 
+  <div class="mat-app-background basic-container">
+      <app-root>loading</app-root>
+    </div>
+    <span class="version-info">Current build: 6.4.2</span>
+
+    <div class="fixed-header" ng-controller="headerCtrl">
+      <a href="" ng-click="gotoAnchor(x)" ng-repeat="x in [1,2,3,4,5]">
+        Go to anchor {{x}}
+      </a>
+    </div>
+    <div id="anchor{{x}}" class="anchor" ng-repeat="x in [1,2,3,4,5]">
+      Anchor {{x}} of 5
+    </div>
 </body>
 </html>

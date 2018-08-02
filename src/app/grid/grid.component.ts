@@ -13,12 +13,12 @@ export class GridComponent implements OnInit {
   result;//:string 
   constructor(private ravintolatService:RavintolatService) { }
 
-  ngOnInit() {
-  }
-  Hae (){
-    this.ravintolatService.haeLista().subscribe(
-      (value) => {this.result = value;
-      console.dir(this.result);}
-      );
-  }
-}
+  ngOnInit() { 
+  
+  // Hae(){
+  //   this.ravintolatService.haeLista().subscribe(
+  //     (value) => {this.result = value;
+  //     console.dir(this.result);}
+  //     );
+  // }
+}}

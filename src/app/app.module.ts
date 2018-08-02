@@ -31,6 +31,7 @@ import { HttpModule } from '@angular/http';
 import { RavintolatService } from './ravintolat.service';
 import { KayttajatService } from './kayttajat.service';
 import { HttpClientModule } from '@angular/common/http';
+import { RavintolatComponent } from './ravintolat/ravintolat.component';
 
 
 
@@ -46,7 +47,8 @@ import { HttpClientModule } from '@angular/common/http';
     PagesComponent,
     HakuComponent,
     AlavalikkoComponent,
-    alavalikko2
+    alavalikko2,
+RavintolatComponent
 
 
   ],

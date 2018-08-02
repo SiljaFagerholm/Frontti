@@ -1,18 +1,21 @@
+<h1>
+    Ravintolat
+  </h1>
+  <ul>
+    <!--  -->
+    <li [class.selected]="p==selectedRavintola" *ngFor="let p of ravintolat" (click)="onSelect(p)"  >{{p.ravintolanNimi}}  <a routerLink="/ravintolat/{{p.Id}}">Lisätiedot</a> </li>
+  </ul>
 
+  
+     
+  <p *ngIf="selectedRavintola">
+    Tarkemmat tiedot: {{selectedRavintola.ravintolanNimi}}, <span [innerHTML]="selectedRavintola.osoite"></span><br/>
 
-<button (click)="Hae()">Calculate</button><br/>
-  Result: {{result}}
-
-  <a href="#" id="new-button">New</a>
-<table>
-<thead>
-    <tr>
-        <th>Date</th>
-        <th>Distance in meters</th>
-        <th>Time</th>
-        <th>Average speed</th>
-        <th>Commands</th>
-    </tr>
-</thead>
-
-</table>
+  <!--  Email, ylläpito:<input required type="email" [(ngModel)]="selectedPerson.Email" />
+  </p>
+  <app-person-details [person]="selectedPerson"></app-person-details>
+  
+  <h3>Luo:</h3>
+  Nimi: <input #name>
+  Email: <input #email>
+  <button (click)="addPerson(name.value, email.value);name.value='';email.value=''">Lisää</button>-->

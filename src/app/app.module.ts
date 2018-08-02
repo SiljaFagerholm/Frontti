@@ -32,6 +32,7 @@ import { RavintolatService } from './ravintolat.service';
 import { KayttajatService } from './kayttajat.service';
 import { HttpClientModule } from '@angular/common/http';
 import { RavintolatComponent } from './ravintolat/ravintolat.component';
+import {RavintolaEditComponent} from './ravintola-lisatiedot/ravintola-lisatiedot.component';
 
 
 
@@ -48,7 +49,8 @@ import { RavintolatComponent } from './ravintolat/ravintolat.component';
     HakuComponent,
     AlavalikkoComponent,
     alavalikko2,
-RavintolatComponent
+RavintolatComponent,
+RavintolaEditComponent
 
 
   ],
@@ -59,11 +61,19 @@ RavintolatComponent
         redirectTo: '/junk-food',
         pathMatch: 'full'
       },
+    
+      {
+        path: 'ravintolakommentit/:id',
+        component: RavintolaEditComponent 
+      },
+      {
+        path: 'ravintola/:id',
+        component: RavintolaEditComponent 
+      },
       {
         path: 'junk-food',
         component: JunkFoodComponent
-      },
-
+      }
 
 
     ]), MatTooltipModule, MatButtonModule, BrowserAnimationsModule, MatButtonModule,

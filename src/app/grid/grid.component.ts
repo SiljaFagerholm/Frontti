@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RavintolatService } from '../ravintolat.service'
+import { Ravintola } from '../ravintola' 
+import {RavintolatComponent} from '../ravintolat/ravintolat.component'
 
 
 @Component({
@@ -15,10 +17,16 @@ export class GridComponent implements OnInit {
 
   ngOnInit() { 
   
+ 
+  }
+
+  puskeListaksi(Ravintola){
+  
+  }
   // Hae(){
   //   this.ravintolatService.haeLista().subscribe(
   //     (value) => {this.result = value;
   //     console.dir(this.result);}
   //     );
   // }
-}}
+}

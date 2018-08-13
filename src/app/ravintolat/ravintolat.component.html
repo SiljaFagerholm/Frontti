@@ -1,15 +1,22 @@
 <h1>
     Ravintolat
   </h1>
-  <ul>
-    <!--  -->
-    <li [class.selected]="p==selectedRavintola" *ngFor="let p of ravintolat" (click)="onSelect(p)"  >{{p.ravintolanNimi}}  <a routerLink="/ravintolat/{{p.Id}}">Lisätiedot</a> </li>
-  </ul>
+  <mat-grid-list cols="1" rowHeight="2:1">
+
+    <mat-grid-tile [class.selected]="p==selectedRavintola" *ngFor="let p of ravintolat" (click)="onSelect(p)">{{p.ravintolanNimi}}
+        {{p.ravintolaKommentit.kommentti}} 
+      <a routerLink="/ravintolakommentit/{{p.ravintolaId}}">Lisätiedot</a> 
+    
+      <!-- <p *ngIf="selectedRavintola"> Tarkemmat tiedot: {{selectedRavintola.ravintolanNimi}}, <span [innerHTML]="selectedRavintola.osoite"></span><br/></p>
+      -->
+      </mat-grid-tile> 
+
+</mat-grid-list>
 
   
      
-  <p *ngIf="selectedRavintola">
-    Tarkemmat tiedot: {{selectedRavintola.ravintolanNimi}}, <span [innerHTML]="selectedRavintola.osoite"></span><br/>
+  <!-- <p *ngIf="selectedRavintola">
+    Tarkemmat tiedot: {{selectedRavintola.ravintolanNimi}}, <span [innerHTML]="selectedRavintola.osoite"></span><br/> -->
 
   <!--  Email, ylläpito:<input required type="email" [(ngModel)]="selectedPerson.Email" />
   </p>
